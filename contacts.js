@@ -1,6 +1,5 @@
 const fs = require('fs/promises');
 const path = require('path');
-// const { nanoid } = require('nanoid');
 
 const contactsPath = path.join(__dirname, "db/contacts.json");
 
@@ -31,7 +30,6 @@ async function addContact({ name, email, phone }) {
   const newId = String(contacts.length + 1);
   const newContact = {
     id: newId,
-    // id: nanoid(),
     name,
     email,
     phone,
